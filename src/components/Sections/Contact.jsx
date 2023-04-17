@@ -104,7 +104,7 @@ function Contact() {
             </a>
           </div>
         </div>
-        <div className="col-md-6 contact-info">
+        <div className="col-md-6 contact-info mb-5">
           <i className="icon-location-pin"></i>
           <div className="details">
             <h5>Linkedin</h5>
@@ -117,7 +117,7 @@ function Contact() {
             </a>
           </div>
         </div>
-        <div className="col-md-6 contact-info">
+        <div className="col-md-6 contact-info mb-5">
           <i className="icon-location-pin"></i>
           <div className="details">
             <h5>Telegram</h5>
@@ -132,7 +132,7 @@ function Contact() {
         </div>
       </div>
 
-      <div className="col-md-12 mt-50">
+      <div className="col-md-12 mt-40">
         <form className="contact-form" onSubmit={submitHandler}>
           <div className="row">
             <div className="column col-md-6">

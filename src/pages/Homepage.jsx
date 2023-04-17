@@ -64,12 +64,12 @@ function Homepage() {
         </section>
       </Element>
 
-      <Element name="section-testimonials">
+      {/* <Element name="section-testimonials">
         <section className="shadow-blue white-bg padding">
           <SectionHeading title="Testimonials" />
           <Testimonials />
         </section>
-      </Element>
+      </Element> */}
 
       <Element name="section-contact">
         <section className="shadow-blue white-bg padding">

@@ -6,7 +6,7 @@ const aboutData = {
   image: "images/about.png",
   interests: "Movies, Video Games, Music, Reading",
   location: "Santo Domingo, DR",
-  birthday: "29 August",
+  birthday: "August 29",
   email: "brayanmbeltre@gmail.com",
   aboutMe: `
 I’m a software developer from the Dominican Republic, focused on Front-end & Web Development. 
