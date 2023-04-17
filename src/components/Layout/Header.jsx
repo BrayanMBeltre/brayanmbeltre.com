@@ -4,7 +4,7 @@ import { Link, useRouteMatch } from "react-router-dom";
 
 const headerData = {
   name: "Brayan M. Beltre",
-  designation: "Web Developer",
+  designation: "Front End Developer",
   imageThumb: "/images/logo.png",
   social: {
     facebook: "https://facebook.com",
