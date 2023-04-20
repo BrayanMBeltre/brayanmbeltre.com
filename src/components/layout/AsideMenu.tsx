@@ -1,30 +1,54 @@
 import Link from 'next/link';
-import React, { createElement } from 'react';
+import { createElement } from 'react';
 
 import clsxm from '@/lib/clsxm';
+import useScrollSpy from '@/hooks/useScrollSpy';
 
-import { asideNavData } from './Aside';
+import { AsideNavData, asideNavData } from '@/data/asideNav';
+
+const createHref = (menu: AsideNavData) => {
+  if (menu.type === 'anchor') {
+    return `/#${menu.href}`;
+  }
+
+  return menu.href || '/';
+};
 
 const AsideMenu = () => {
+  const activeSection = useScrollSpy();
+
   return (
     <nav className='mt-10'>
       <ul className=''>
-        {asideNavData.map((menu) => (
-          <li key={menu.href}>
-            <Link
-              href={menu?.type === 'anchor' ? `#${menu.href}` : menu.href}
-              className={clsxm(
-                'flex items-center gap-4 transition-all duration-500 hover:pl-1'
+        {asideNavData.map((menu) => {
+          const href = createHref(menu);
+
+          return (
+            <li key={menu.href}>
+              {menu.type === 'button' && (
+                <button type='button'>{menu.label}</button>
               )}
-            >
-              {menu.icon &&
-                createElement(menu.icon, {
-                  className: clsxm('h-4 w-4'),
-                })}
-              {menu.label}
-            </Link>
-          </li>
-        ))}
+              {menu.type !== 'button' && (
+                <Link
+                  href={href}
+                  className={clsxm(
+                    ' flex items-center gap-4 transition-all duration-500 hover:pl-1',
+                    activeSection === menu.href
+                      ? 'text-[#d35d0e]'
+                      : 'text-white'
+                  )}
+                >
+                  {menu.icon &&
+                    createElement(menu.icon, {
+                      className: clsxm('h-4 w-4'),
+                    })}
+
+                  {menu.label}
+                </Link>
+              )}
+            </li>
+          );
+        })}
       </ul>
     </nav>
   );

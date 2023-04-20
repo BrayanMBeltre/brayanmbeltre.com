@@ -1,60 +1,26 @@
 import Image from 'next/image';
-import React from 'react';
-import {
-  FiBookOpen,
-  FiBriefcase,
-  FiHome,
-  FiPhone,
-  FiUser,
-} from 'react-icons/fi';
 
 import clsxm from '@/lib/clsxm';
 
-import AsideMenu from './AsideMenu';
+import { userData } from '@/data/user';
+
+import AsideMenu from '@/components/layout/AsideMenu';
 
 import avatar from '~/images/avatar.png';
-
-export const asideNavData = [
-  {
-    label: 'Home',
-    href: '/',
-    icon: FiHome,
-  },
-  {
-    label: 'About',
-    href: 'about',
-    type: 'anchor',
-    icon: FiUser,
-  },
-  {
-    label: 'Resume',
-    href: 'resume',
-    type: 'anchor',
-    icon: FiBookOpen,
-  },
-  {
-    label: 'Works',
-    href: 'works',
-    type: 'anchor',
-    icon: FiBriefcase,
-  },
-  {
-    label: 'Contact',
-    href: 'contact',
-    type: 'anchor',
-    icon: FiPhone,
-  },
-];
 
 type AsideProps = {
   className?: string;
 };
 
+// const AsideMenu = dynamic(() => import('./AsideMenu'), {
+//   // ssr: false,
+// });
+
 const Aside = ({ className }: AsideProps) => {
   return (
     <aside
       className={clsxm(
-        'sticky  h-[620px] flex-shrink-0 rounded-3xl bg-[#282828] p-7 text-white',
+        'sticky h-[620px] flex-shrink-0 rounded-3xl bg-[#282828] p-7 text-white',
         className
       )}
     >
@@ -66,6 +32,12 @@ const Aside = ({ className }: AsideProps) => {
       <p>WEB DEVELOPER</p>
 
       <AsideMenu />
+
+      <p className='pt-[260px] opacity-70'>
+        <small>
+          &copy; {new Date().getFullYear()} {userData.name}
+        </small>
+      </p>
     </aside>
   );
 };
