@@ -14,7 +14,8 @@ const ButtonLinkVariant = [
   'light',
   'dark',
 ] as const;
-const ButtonLinkSize = ['sm', 'base'] as const;
+
+const ButtonLinkSize = ['sm', 'base', 'xl'] as const;
 
 type ButtonLinkProps = {
   isDarkBg?: boolean;
@@ -47,29 +48,31 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
         ref={ref}
         {...rest}
         className={clsxm(
-          'inline-flex items-center rounded font-medium',
+          'inline-flex items-center rounded-3xl font-medium',
           'focus-visible:ring-primary-500 focus:outline-none focus-visible:ring',
           'shadow-sm',
-          'transition-colors duration-75',
+          'transition-all duration-200',
+          'hover:-translate-y-1',
           //#region  //*=========== Size ===========
           [
-            size === 'base' && ['px-3 py-1.5', 'text-sm md:text-base'],
             size === 'sm' && ['px-2 py-1', 'text-xs md:text-sm'],
+            size === 'base' && ['px-3 py-1.5', 'text-sm md:text-base'],
+            size === 'xl' && ['px-[26px] py-[12px]', 'text-sm md:text-base'],
           ],
           //#endregion  //*======== Size ===========
           //#region  //*=========== Variants ===========
           [
             variant === 'primary' && [
-              'bg-primary-500 text-white',
+              'bg-primary-600 text-white',
               'border-primary-600 border',
               'hover:bg-primary-600 hover:text-white',
               'active:bg-primary-700',
               'disabled:bg-primary-700',
             ],
             variant === 'outline' && [
-              'text-primary-500',
-              'border-primary-500 border',
-              'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
+              'text-white',
+              'border border-white',
+              'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100 hover:text-[#282828]',
               isDarkBg &&
                 'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
             ],
@@ -100,15 +103,17 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
         {LeftIcon && (
           <div
             className={clsxm([
-              size === 'base' && 'mr-1',
               size === 'sm' && 'mr-1.5',
+              size === 'base' && 'mr-1',
+              size === 'xl' && 'mr-2',
             ])}
           >
             <LeftIcon
               className={clsxm(
                 [
-                  size === 'base' && 'md:text-md text-md',
                   size === 'sm' && 'md:text-md text-sm',
+                  size === 'base' && 'md:text-md text-md',
+                  size === 'xl' && 'md:text-md text-md ',
                 ],
                 leftIconClassName
               )}
@@ -119,15 +124,15 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
         {RightIcon && (
           <div
             className={clsxm([
-              size === 'base' && 'ml-1',
               size === 'sm' && 'ml-1.5',
+              size === 'base' && 'ml-1',
             ])}
           >
             <RightIcon
               className={clsxm(
                 [
-                  size === 'base' && 'text-md md:text-md',
                   size === 'sm' && 'md:text-md text-sm',
+                  size === 'base' && 'text-md md:text-md',
                 ],
                 rightIconClassName
               )}

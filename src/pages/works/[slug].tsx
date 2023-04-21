@@ -1,9 +1,7 @@
-import Link from 'next/link';
 import * as React from 'react';
 
 import Layout from '@/components/layout/Layout';
 import SectionCard from '@/components/Sections/Card';
-import Hero from '@/components/Sections/Hero';
 
 /**
  * SVGR Support
@@ -25,27 +23,8 @@ export default function HomePage() {
         hero
       </div> */}
 
-      <Hero />
-
-      <SectionCard title='About' id='about'>
-        <div>About</div>
-      </SectionCard>
-
-      <SectionCard title='resume' id='resume'>
-        <div>resume</div>
-      </SectionCard>
-
-      <SectionCard title='resume' id='resume'>
-        <div>resume</div>
-      </SectionCard>
-
-      <SectionCard title='works' id='works'>
-        <div>works</div>
-        <Link href='/works'>all works</Link>
-      </SectionCard>
-
-      <SectionCard title='contact' id='contact'>
-        <div>contact</div>
+      <SectionCard id='/'>
+        <div>Work one</div>
       </SectionCard>
     </Layout>
   );

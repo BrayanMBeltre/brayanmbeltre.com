@@ -13,12 +13,9 @@ export type UnstyledLinkProps = {
 
 const UnstyledLink = React.forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
   ({ children, href, openNewTab, className, nextLinkProps, ...rest }, ref) => {
-    const isNewTab =
-      openNewTab !== undefined
-        ? openNewTab
-        : href && !href.startsWith('/') && !href.startsWith('#');
+    const isAnchor = href && href.startsWith('#');
 
-    if (!isNewTab) {
+    if (!isAnchor) {
       return (
         <Link
           href={href}
@@ -35,11 +32,11 @@ const UnstyledLink = React.forwardRef<HTMLAnchorElement, UnstyledLinkProps>(
     return (
       <a
         ref={ref}
-        target='_blank'
+        target={openNewTab ? '_blank' : '_self'}
         rel='noopener noreferrer'
         href={href}
         {...rest}
-        className={clsxm('cursor-newtab', className)}
+        className={clsxm(openNewTab && 'cursor-newtab', className)}
       >
         {children}
       </a>

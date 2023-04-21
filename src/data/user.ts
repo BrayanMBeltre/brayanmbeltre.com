@@ -1,6 +1,9 @@
 export const userData = {
   name: 'Brayan M. Beltre',
   designation: 'Front End Developer',
+  greeting: 'Hi! I’m Brayan',
+  description:
+    'I’m a software developer from the Dominican Republic, focused on Front-end & Web Development.',
   imageThumb: '/images/logo.png',
   social: {
     facebook: 'https://facebook.com',

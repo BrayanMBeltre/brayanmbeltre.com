@@ -5,7 +5,7 @@ import { ImSpinner2 } from 'react-icons/im';
 import clsxm from '@/lib/clsxm';
 
 const ButtonVariant = ['primary', 'outline', 'ghost', 'light', 'dark'] as const;
-const ButtonSize = ['sm', 'base'] as const;
+const ButtonSize = ['sm', 'base', 'xl'] as const;
 
 type ButtonProps = {
   isLoading?: boolean;
@@ -44,14 +44,16 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         type='button'
         disabled={disabled}
         className={clsxm(
-          'inline-flex items-center rounded font-medium',
+          'inline-flex items-center rounded-3xl font-medium',
           'focus-visible:ring-primary-500 focus:outline-none focus-visible:ring',
           'shadow-sm',
-          'transition-colors duration-75',
+          'transition-all duration-200',
+          'hover:-translate-y-1',
           //#region  //*=========== Size ===========
           [
             size === 'base' && ['px-3 py-1.5', 'text-sm md:text-base'],
             size === 'sm' && ['px-2 py-1', 'text-xs md:text-sm'],
+            size === 'xl' && ['px-[26px] py-[12px]', 'text-sm md:text-base'],
           ],
           //#endregion  //*======== Size ===========
           //#region  //*=========== Variants ===========
@@ -64,9 +66,9 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
               'disabled:bg-primary-700',
             ],
             variant === 'outline' && [
-              'text-primary-500',
-              'border-primary-500 border',
-              'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100',
+              'text-white',
+              'border border-white',
+              'hover:bg-primary-50 active:bg-primary-100 disabled:bg-primary-100 hover:text-[#282828]',
               isDarkBg &&
                 'hover:bg-gray-900 active:bg-gray-800 disabled:bg-gray-800',
             ],
@@ -116,6 +118,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
             className={clsxm([
               size === 'base' && 'mr-1',
               size === 'sm' && 'mr-1.5',
+              size === 'xl' && 'mr-2',
             ])}
           >
             <LeftIcon
@@ -123,6 +126,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
                 [
                   size === 'base' && 'md:text-md text-md',
                   size === 'sm' && 'md:text-md text-sm',
+                  size === 'xl' && 'md:text-md text-md ',
                 ],
                 leftIconClassName
               )}

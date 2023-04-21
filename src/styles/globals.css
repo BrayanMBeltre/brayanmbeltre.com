@@ -47,13 +47,9 @@
   }
 
   /* #region  /**=========== Typography =========== */
-  .h0 {
-    @apply font-primary text-3xl font-bold md:text-5xl;
-  }
-
   h1,
   .h1 {
-    @apply font-primary text-2xl font-bold md:text-4xl;
+    @apply font-primary text-2xl font-bold md:text-6xl;
   }
 
   h2,
@@ -116,4 +112,8 @@
   .animated-underline:focus-visible {
     background-size: 0 2px, 100% 2px;
   }
+}
+
+html {
+  scroll-behavior: smooth;
 }

@@ -1,20 +1,30 @@
 import { ReactNode } from 'react';
 
+import clsxm from '@/lib/clsxm';
+
 type SectionCardProps = {
-  title: string;
+  title?: string;
   id: string;
   children: ReactNode;
+  className?: string;
 };
 
-const SectionCard = ({ title, id, children }: SectionCardProps) => {
+const SectionCard = ({ title, id, children, className }: SectionCardProps) => {
   return (
     <section
       title={title}
       id={id}
-      className='section h-screen rounded-xl bg-white shadow-lg'
+      className={clsxm(
+        'section rounded-[20px] bg-white shadow-lg',
+        'sm:min-h-[620px]',
+        'mb-[50px]',
+        'overflow-hidden',
+        className
+      )}
     >
-      {title}
-      <div>{children}</div>
+      {title && title}
+
+      {children}
     </section>
   );
 };

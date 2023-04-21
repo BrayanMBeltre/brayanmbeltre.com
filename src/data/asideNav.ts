@@ -18,7 +18,7 @@ export const asideNavData: AsideNavData[] = [
   {
     label: 'Home',
     href: '/',
-    type: 'link',
+    type: 'anchor',
     icon: FiHome,
   },
   {
