@@ -23,7 +23,7 @@
     "category": "portal",
     "featuredImage": "/images/datos-abiertos.png",
     "body": {
-      "raw": "\nPortal that uses an API offered by the DMS CKAN to show the open data of the institutions of the Dominican Republic.\n",
+      "raw": "\r\nPortal that uses an API offered by the DMS CKAN to show the open data of the institutions of the Dominican Republic.\r\n",
       "html": "<p>Portal that uses an API offered by the DMS CKAN to show the open data of the institutions of the Dominican Republic.</p>"
     },
     "_id": "datos-abiertos.md",
@@ -101,7 +101,7 @@
     "url": "https://becas.gob.do/",
     "featuredImage": "/images/portal-becas.png",
     "body": {
-      "raw": "\nCreation of the portal becas.gob.do used by more than 200,000 Dominican and international citizens to apply for national and international scholarships.Development of the back-office used by dozens of institutions in the Dominican Republic to create, configure, manage, publish and approve scholarships for citizens who apply for them.\n",
+      "raw": "\r\nCreation of the portal becas.gob.do used by more than 200,000 Dominican and international citizens to apply for national and international scholarships.Development of the back-office used by dozens of institutions in the Dominican Republic to create, configure, manage, publish and approve scholarships for citizens who apply for them.\r\n",
       "html": "<p>Creation of the portal becas.gob.do used by more than 200,000 Dominican and international citizens to apply for national and international scholarships.Development of the back-office used by dozens of institutions in the Dominican Republic to create, configure, manage, publish and approve scholarships for citizens who apply for them.</p>"
     },
     "_id": "portal-beca-tu-futuro.md",
@@ -121,7 +121,7 @@
     "url": "https://www.gob.do/",
     "featuredImage": "/images/portal-gob-do.png",
     "body": {
-      "raw": "\nIt was achieved that all the country's services are standardized through a digital platform, thus achieving transparency and reducing the time to carry out government processes.\n",
+      "raw": "\r\nIt was achieved that all the country's services are standardized through a digital platform, thus achieving transparency and reducing the time to carry out government processes.\r\n",
       "html": "<p>It was achieved that all the country's services are standardized through a digital platform, thus achieving transparency and reducing the time to carry out government processes.</p>"
     },
     "_id": "portal-gob-do.md",

@@ -1,22 +1,22 @@
-import NextLink from 'next/link';
 import { useRouter } from 'next/router';
-import { AnchorHTMLAttributes, createElement, DetailedHTMLProps } from 'react';
+import { createElement } from 'react';
 
 import clsxm from '@/lib/clsxm';
 import useScrollSpy from '@/hooks/useScrollSpy';
 
 import { AsideNavData, asideNavData } from '@/data/asideNav';
 
+import UnstyledLink, {
+  UnstyledLinkProps,
+} from '@/components/links/UnstyledLink';
+
 type LinkProps = {
   type: 'a' | 'Link';
-} & DetailedHTMLProps<
-  AnchorHTMLAttributes<HTMLAnchorElement>,
-  HTMLAnchorElement
->;
+} & UnstyledLinkProps;
 
 const Link = ({ type, children, ...rest }: LinkProps) => {
   if (type === 'a') return <a {...rest}>{children}</a>;
-  return <NextLink {...(rest as any)}>{children}</NextLink>;
+  return <UnstyledLink {...rest}>{children}</UnstyledLink>;
 };
 
 const createHref = (menu: AsideNavData) => {
