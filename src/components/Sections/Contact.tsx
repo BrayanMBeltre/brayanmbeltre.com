@@ -18,7 +18,7 @@ const ContactItem = ({ description, href, icon, name }: ContactItemProps) => (
 
     <UnderlineLink target='_blank' href={href} className='cursor-newtab'>
       <div>
-        <h4>{name}</h4>
+        <h5 className='font-bold'>{name}</h5>
         {description}
       </div>
     </UnderlineLink>
