@@ -1,4 +1,4 @@
-import sendgrid from '@sendgrid/mail';
+import sendgrid, { ResponseError } from '@sendgrid/mail';
 import { NextApiRequest, NextApiResponse } from 'next';
 
 import logger from '@/lib/logger';
@@ -22,11 +22,16 @@ async function sendEmail(req: NextApiRequest, res: NextApiResponse) {
       </div>`,
     });
     logger(res);
-  } catch (error) {
-    return res.status(500).json({ error: 'Something went wrong' });
+  } catch (err) {
+    const error = err as ResponseError;
+
+    return res.status(error.code || 500).json({
+      success: false,
+      error: error.response.body || 'Something went wrong',
+    });
   }
 
-  return res.status(200).json({ error: '' });
+  return res.status(200).json({ success: true });
 }
 
 export default sendEmail;
