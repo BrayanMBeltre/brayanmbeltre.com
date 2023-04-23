@@ -57,7 +57,7 @@ export default function Radio({
             'focus:outline-none focus:ring-0',
             'checked:bg-primary-500 checked:hover:bg-primary-600 checked:focus:bg-primary-500 checked:active:bg-primary-700',
             (readOnly || disabled) &&
-              'cursor-not-allowed bg-gray-100 disabled:checked:bg-primary-400',
+              'disabled:checked:bg-primary-400 cursor-not-allowed bg-gray-100',
             error && 'border-danger-400 bg-danger-100'
           )}
           placeholder={placeholder}

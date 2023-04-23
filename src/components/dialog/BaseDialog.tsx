@@ -55,11 +55,11 @@ export default function BaseDialog({
       <Dialog
         as='div'
         static
-        className='overflow-y-auto fixed inset-0 z-40'
+        className='fixed inset-0 z-40 overflow-y-auto'
         open={open}
         onClose={() => onClose()}
       >
-        <div className='flex justify-center items-end px-4 pt-4 pb-20 min-h-screen text-center sm:block sm:p-0'>
+        <div className='flex min-h-screen items-end justify-center px-4 pb-20 pt-4 text-center sm:block sm:p-0'>
           <Transition.Child
             as={React.Fragment}
             enter='ease-out duration-300'
@@ -88,35 +88,35 @@ export default function BaseDialog({
             leaveFrom='opacity-100 translate-y-0 sm:scale-100'
             leaveTo='opacity-0 translate-y-4 sm:translate-y-0 sm:scale-95'
           >
-            <div className='inline-block overflow-hidden z-auto px-4 pt-5 pb-4 w-full text-left align-bottom bg-white rounded-lg shadow-xl transition-all transform sm:p-6 sm:my-8 sm:max-w-lg sm:align-middle'>
-              <div className='hidden absolute top-0 right-0 pt-4 pr-4 sm:block'>
+            <div className='z-auto inline-block w-full transform overflow-hidden rounded-lg bg-white px-4 pb-4 pt-5 text-left align-bottom shadow-xl transition-all sm:my-8 sm:max-w-lg sm:p-6 sm:align-middle'>
+              <div className='absolute right-0 top-0 hidden pr-4 pt-4 sm:block'>
                 <button
                   type='button'
                   className={clsx(
-                    'text-gray-400 bg-white rounded-md hover:text-gray-500',
-                    'focus:ring-2 focus:ring-gray-400 focus:ring-offset-2 focus:outline-none',
-                    'disabled:filter disabled:brightness-90 disabled:cursor-wait'
+                    'rounded-md bg-white text-gray-400 hover:text-gray-500',
+                    'focus:outline-none focus:ring-2 focus:ring-gray-400 focus:ring-offset-2',
+                    'disabled:cursor-wait disabled:brightness-90 disabled:filter'
                   )}
                   onClick={onClose}
                 >
                   <span className='sr-only'>Close</span>
-                  <HiOutlineX className='w-6 h-6' aria-hidden='true' />
+                  <HiOutlineX className='h-6 w-6' aria-hidden='true' />
                 </button>
               </div>
               <div className='sm:flex sm:items-start'>
                 <div
                   className={clsx(
-                    'flex flex-shrink-0 justify-center items-center rounded-full',
-                    'mx-auto w-12 h-12 sm:mx-0 sm:w-10 sm:h-10',
+                    'flex flex-shrink-0 items-center justify-center rounded-full',
+                    'mx-auto h-12 w-12 sm:mx-0 sm:h-10 sm:w-10',
                     current.bg.light
                   )}
                 >
                   <current.icon
-                    className={clsx('w-6 h-6', current.text.primary)}
+                    className={clsx('h-6 w-6', current.text.primary)}
                     aria-hidden='true'
                   />
                 </div>
-                <div className='mt-3 text-center sm:mt-0 sm:ml-4 sm:text-left'>
+                <div className='mt-3 text-center sm:ml-4 sm:mt-0 sm:text-left'>
                   <Dialog.Title
                     as='h3'
                     className='text-lg font-medium leading-6 text-gray-900'
@@ -128,11 +128,11 @@ export default function BaseDialog({
                   </div>
                 </div>
               </div>
-              <div className='mt-5 sm:flex sm:flex-row-reverse sm:mt-4'>
+              <div className='mt-5 sm:mt-4 sm:flex sm:flex-row-reverse'>
                 <Button
                   onClick={onSubmit}
                   className={clsx(
-                    '!font-medium justify-center items-center w-full sm:ml-3 sm:w-auto sm:text-sm'
+                    'w-full items-center justify-center !font-medium sm:ml-3 sm:w-auto sm:text-sm'
                   )}
                 >
                   {submitText}
@@ -141,7 +141,7 @@ export default function BaseDialog({
                   type='button'
                   variant='outline'
                   onClick={onClose}
-                  className='!font-medium justify-center items-center mt-3 w-full sm:mt-0 sm:w-auto sm:text-sm'
+                  className='mt-3 w-full items-center justify-center !font-medium sm:mt-0 sm:w-auto sm:text-sm'
                 >
                   Cancel
                 </Button>
