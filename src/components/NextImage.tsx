@@ -10,7 +10,7 @@ type NextImageProps = {
   alt: string;
 } & (
   | { width: string | number; height: string | number }
-  | { layout: 'fill'; width?: string | number; height?: string | number }
+  | { fill: boolean; width?: string | number; height?: string | number }
 ) &
   ImageProps;
 
@@ -34,8 +34,6 @@ export default function NextImage({
     useSkeleton ? 'loading' : 'complete'
   );
   const widthIsSet = className?.includes('w-') ?? false;
-
-  console.log(widthIsSet);
 
   return (
     <figure

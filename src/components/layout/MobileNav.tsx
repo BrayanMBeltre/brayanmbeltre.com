@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { GoPrimitiveDot } from 'react-icons/go';
 
 import clsxm from '@/lib/clsxm';
@@ -18,16 +19,23 @@ const MobileNav = ({ className }: Props) => {
         className
       )}
     >
-      <div className='flex items-center gap-2'>
+      <Link href='/' className='flex items-center gap-2'>
         <div>
-          <Image priority alt='avatar' src={avatar} height={36} width={36} />
+          <Image
+            priority
+            alt='avatar'
+            src={avatar}
+            height={36}
+            width={36}
+            className='h-auto w-auto'
+          />
         </div>
 
         <h2 className='flex items-end text-2xl font-bold  text-white'>
           Brayan M. Beltre
           <GoPrimitiveDot className='mb-1 text-[#d65d0e]' size={16} />
         </h2>
-      </div>
+      </Link>
 
       <div className='mt-[15px] sm:mt-0'>
         <AsideMenu />

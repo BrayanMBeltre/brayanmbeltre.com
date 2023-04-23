@@ -1,0 +1,19 @@
+{
+  "title": "Datos abiertos",
+  "category": "portal",
+  "featuredImage": "/images/datos-abiertos.png",
+  "body": {
+    "raw": "\nPortal that uses an API offered by the DMS CKAN to show the open data of the institutions of the Dominican Republic.\n",
+    "html": "<p>Portal that uses an API offered by the DMS CKAN to show the open data of the institutions of the Dominican Republic.</p>"
+  },
+  "_id": "datos-abiertos.md",
+  "_raw": {
+    "sourceFilePath": "datos-abiertos.md",
+    "sourceFileName": "datos-abiertos.md",
+    "sourceFileDir": ".",
+    "contentType": "markdown",
+    "flattenedPath": "datos-abiertos"
+  },
+  "type": "Project",
+  "slug": "datos-abiertos"
+}

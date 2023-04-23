@@ -1,52 +1,38 @@
-import Link from 'next/link';
-import * as React from 'react';
+import { allProjects } from 'contentlayer/generated';
+import { InferGetStaticPropsType } from 'next';
 
 import Layout from '@/components/layout/Layout';
-import SectionCard from '@/components/Sections/Card';
+import AboutSection from '@/components/Sections/About';
+import ContactSection from '@/components/Sections/Contact';
+import Experience from '@/components/Sections/Experience';
+import Funfacts from '@/components/Sections/Funfacts';
 import Hero from '@/components/Sections/Hero';
+import SkillsSection from '@/components/Sections/Skills';
+import WorksSection from '@/components/Sections/Works';
 
-/**
- * SVGR Support
- * Caveat: No React Props Type.
- *
- * You can override the next-env if the type is important to you
- * @see https://stackoverflow.com/questions/68103844/how-to-override-next-js-svg-module-declaration
- */
+export async function getStaticProps() {
+  const projects = allProjects.slice(0, 6);
+  return { props: { projects } };
+}
 
-// !STARTERCONF -> Select !STARTERCONF and CMD + SHIFT + F
-// Before you begin editing, follow all comments with `STARTERCONF`,
-// to customize the default configuration.
-
-export default function HomePage() {
+export default function HomePage({
+  projects,
+}: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Layout>
-      {/* <Seo templateTitle='Home' /> */}
-      {/* <div id='/' className='section h-[600px]'>
-        hero
-      </div> */}
-
       <Hero />
 
-      <SectionCard title='About' id='about'>
-        <div>About</div>
-      </SectionCard>
+      <AboutSection />
 
-      <SectionCard title='resume' id='resume'>
-        <div>resume</div>
-      </SectionCard>
+      <SkillsSection />
 
-      <SectionCard title='resume' id='resume'>
-        <div>resume</div>
-      </SectionCard>
+      <Funfacts />
 
-      <SectionCard title='works' id='works'>
-        <div>works</div>
-        <Link href='/works'>all works</Link>
-      </SectionCard>
+      <Experience />
 
-      <SectionCard title='contact' id='contact'>
-        <div>contact</div>
-      </SectionCard>
+      <WorksSection data={projects} />
+
+      <ContactSection />
     </Layout>
   );
 }

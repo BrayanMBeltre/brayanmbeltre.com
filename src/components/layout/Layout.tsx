@@ -3,6 +3,7 @@ import * as React from 'react';
 
 import clsxm from '@/lib/clsxm';
 
+import DismissableToast from '@/components/DismissableToast';
 import Aside from '@/components/layout/Aside';
 import MobileNav from '@/components/layout/MobileNav';
 
@@ -19,7 +20,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           inter.className
         )}
       >
-        {/* <DismissableToast /> */}
+        <DismissableToast />
 
         <MobileNav className={clsxm('mx-[15px] lg:hidden', 'my-[20px]')} />
 

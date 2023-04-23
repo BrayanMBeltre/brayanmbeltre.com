@@ -1,0 +1,19 @@
+{
+  "title": "E-Ticket",
+  "category": "portal",
+  "featuredImage": "/images/portal-e-ticket.png",
+  "body": {
+    "raw": "",
+    "html": ""
+  },
+  "_id": "e-ticket.md",
+  "_raw": {
+    "sourceFilePath": "e-ticket.md",
+    "sourceFileName": "e-ticket.md",
+    "sourceFileDir": ".",
+    "contentType": "markdown",
+    "flattenedPath": "e-ticket"
+  },
+  "type": "Project",
+  "slug": "e-ticket"
+}

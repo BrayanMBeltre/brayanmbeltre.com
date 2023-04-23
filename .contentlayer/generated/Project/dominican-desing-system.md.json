@@ -1,0 +1,19 @@
+{
+  "title": "Dominican Desing System",
+  "category": "portal",
+  "featuredImage": "/images/ssd.png",
+  "body": {
+    "raw": "",
+    "html": ""
+  },
+  "_id": "dominican-desing-system.md",
+  "_raw": {
+    "sourceFilePath": "dominican-desing-system.md",
+    "sourceFileName": "dominican-desing-system.md",
+    "sourceFileDir": ".",
+    "contentType": "markdown",
+    "flattenedPath": "dominican-desing-system"
+  },
+  "type": "Project",
+  "slug": "dominican-desing-system"
+}

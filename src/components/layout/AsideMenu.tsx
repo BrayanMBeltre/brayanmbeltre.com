@@ -1,11 +1,23 @@
-import Link from 'next/link';
+import NextLink from 'next/link';
 import { useRouter } from 'next/router';
-import { createElement } from 'react';
+import { AnchorHTMLAttributes, createElement, DetailedHTMLProps } from 'react';
 
 import clsxm from '@/lib/clsxm';
 import useScrollSpy from '@/hooks/useScrollSpy';
 
 import { AsideNavData, asideNavData } from '@/data/asideNav';
+
+type LinkProps = {
+  type: 'a' | 'Link';
+} & DetailedHTMLProps<
+  AnchorHTMLAttributes<HTMLAnchorElement>,
+  HTMLAnchorElement
+>;
+
+const Link = ({ type, children, ...rest }: LinkProps) => {
+  if (type === 'a') return <a {...rest}>{children}</a>;
+  return <NextLink {...(rest as any)}>{children}</NextLink>;
+};
 
 const createHref = (menu: AsideNavData) => {
   if (menu.type === 'anchor') {
@@ -22,7 +34,7 @@ const AsideMenu = () => {
 
   return (
     <nav className='lg:mt-10'>
-      <ul className='flex gap-4 lg:block'>
+      <ul className='flex space-x-3 lg:block lg:space-x-0 lg:space-y-2'>
         {asideNavData.map((menu) => {
           const href = createHref(menu);
 
@@ -32,44 +44,28 @@ const AsideMenu = () => {
                 <button type='button'>{menu.label}</button>
               )}
 
-              {!isHomePage &&
-                (menu.type === 'anchor' || menu.type === 'link') && (
-                  <Link
-                    href={href}
-                    className={clsxm(
-                      ' flex items-center gap-4 transition-all duration-500 lg:hover:pl-1',
-                      activeSection === menu.href
-                        ? 'text-[#d35d0e]'
-                        : 'text-white'
-                    )}
-                  >
-                    {menu.icon &&
-                      createElement(menu.icon, {
-                        className: clsxm('h-4 w-4 hidden lg:block'),
-                      })}
-
-                    {menu.label}
-                  </Link>
+              <Link
+                type={isHomePage && menu.type === 'anchor' ? 'a' : 'Link'}
+                href={href}
+                className={clsxm(
+                  'relative flex items-center gap-4 text-white transition-all duration-500 lg:hover:pl-1'
                 )}
-
-              {isHomePage && menu.type === 'anchor' && (
-                <a
-                  href={href}
+              >
+                <div
                   className={clsxm(
-                    ' flex items-center gap-4 transition-all duration-500 lg:hover:pl-1',
-                    activeSection === menu.href
-                      ? 'text-[#d35d0e]'
-                      : 'text-white'
+                    'bg-primary-600 absolute -left-[27px] hidden h-full  rounded-r-md lg:block',
+                    ' transition-all duration-200',
+                    activeSection === menu.href ? 'w-[3px]' : 'w-0'
                   )}
-                >
-                  {menu.icon &&
-                    createElement(menu.icon, {
-                      className: clsxm('h-4 w-4 hidden lg:block'),
-                    })}
+                />
 
-                  {menu.label}
-                </a>
-              )}
+                {menu.icon &&
+                  createElement(menu.icon, {
+                    className: clsxm('h-4 w-4 hidden lg:block'),
+                  })}
+
+                {menu.label}
+              </Link>
             </li>
           );
         })}

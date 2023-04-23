@@ -1,4 +1,3 @@
-import * as React from 'react';
 import { toast, ToastBar, Toaster } from 'react-hot-toast';
 import { HiX } from 'react-icons/hi';
 

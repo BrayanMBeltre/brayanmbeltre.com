@@ -1,0 +1,20 @@
+{
+  "title": "Beca tu futuro",
+  "category": "portal",
+  "url": "https://becas.gob.do/",
+  "featuredImage": "/images/portal-becas.png",
+  "body": {
+    "raw": "\nCreation of the portal becas.gob.do used by more than 200,000 Dominican and international citizens to apply for national and international scholarships.Development of the back-office used by dozens of institutions in the Dominican Republic to create, configure, manage, publish and approve scholarships for citizens who apply for them.\n",
+    "html": "<p>Creation of the portal becas.gob.do used by more than 200,000 Dominican and international citizens to apply for national and international scholarships.Development of the back-office used by dozens of institutions in the Dominican Republic to create, configure, manage, publish and approve scholarships for citizens who apply for them.</p>"
+  },
+  "_id": "portal-beca-tu-futuro.md",
+  "_raw": {
+    "sourceFilePath": "portal-beca-tu-futuro.md",
+    "sourceFileName": "portal-beca-tu-futuro.md",
+    "sourceFileDir": ".",
+    "contentType": "markdown",
+    "flattenedPath": "portal-beca-tu-futuro"
+  },
+  "type": "Project",
+  "slug": "portal-beca-tu-futuro"
+}

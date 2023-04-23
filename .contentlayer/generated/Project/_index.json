@@ -1,0 +1,138 @@
+[
+  {
+    "title": "Backoffice www.gob.do",
+    "category": "backoffice",
+    "featuredImage": "/images/backoffice-gob-do.png",
+    "body": {
+      "raw": "",
+      "html": ""
+    },
+    "_id": "backoffice-gob-do.md",
+    "_raw": {
+      "sourceFilePath": "backoffice-gob-do.md",
+      "sourceFileName": "backoffice-gob-do.md",
+      "sourceFileDir": ".",
+      "contentType": "markdown",
+      "flattenedPath": "backoffice-gob-do"
+    },
+    "type": "Project",
+    "slug": "backoffice-gob-do"
+  },
+  {
+    "title": "Datos abiertos",
+    "category": "portal",
+    "featuredImage": "/images/datos-abiertos.png",
+    "body": {
+      "raw": "\nPortal that uses an API offered by the DMS CKAN to show the open data of the institutions of the Dominican Republic.\n",
+      "html": "<p>Portal that uses an API offered by the DMS CKAN to show the open data of the institutions of the Dominican Republic.</p>"
+    },
+    "_id": "datos-abiertos.md",
+    "_raw": {
+      "sourceFilePath": "datos-abiertos.md",
+      "sourceFileName": "datos-abiertos.md",
+      "sourceFileDir": ".",
+      "contentType": "markdown",
+      "flattenedPath": "datos-abiertos"
+    },
+    "type": "Project",
+    "slug": "datos-abiertos"
+  },
+  {
+    "title": "Dominican Desing System",
+    "category": "portal",
+    "featuredImage": "/images/ssd.png",
+    "body": {
+      "raw": "",
+      "html": ""
+    },
+    "_id": "dominican-desing-system.md",
+    "_raw": {
+      "sourceFilePath": "dominican-desing-system.md",
+      "sourceFileName": "dominican-desing-system.md",
+      "sourceFileDir": ".",
+      "contentType": "markdown",
+      "flattenedPath": "dominican-desing-system"
+    },
+    "type": "Project",
+    "slug": "dominican-desing-system"
+  },
+  {
+    "title": "E-Ticket",
+    "category": "portal",
+    "featuredImage": "/images/portal-e-ticket.png",
+    "body": {
+      "raw": "",
+      "html": ""
+    },
+    "_id": "e-ticket.md",
+    "_raw": {
+      "sourceFilePath": "e-ticket.md",
+      "sourceFileName": "e-ticket.md",
+      "sourceFileDir": ".",
+      "contentType": "markdown",
+      "flattenedPath": "e-ticket"
+    },
+    "type": "Project",
+    "slug": "e-ticket"
+  },
+  {
+    "title": "InfraSecurityCode",
+    "category": "website",
+    "url": "https://www.infrasecuritycode.com/",
+    "featuredImage": "/images/infrasecuritycode.png",
+    "body": {
+      "raw": "",
+      "html": ""
+    },
+    "_id": "infrasecuritycode.md",
+    "_raw": {
+      "sourceFilePath": "infrasecuritycode.md",
+      "sourceFileName": "infrasecuritycode.md",
+      "sourceFileDir": ".",
+      "contentType": "markdown",
+      "flattenedPath": "infrasecuritycode"
+    },
+    "type": "Project",
+    "slug": "infrasecuritycode"
+  },
+  {
+    "title": "Beca tu futuro",
+    "category": "portal",
+    "url": "https://becas.gob.do/",
+    "featuredImage": "/images/portal-becas.png",
+    "body": {
+      "raw": "\nCreation of the portal becas.gob.do used by more than 200,000 Dominican and international citizens to apply for national and international scholarships.Development of the back-office used by dozens of institutions in the Dominican Republic to create, configure, manage, publish and approve scholarships for citizens who apply for them.\n",
+      "html": "<p>Creation of the portal becas.gob.do used by more than 200,000 Dominican and international citizens to apply for national and international scholarships.Development of the back-office used by dozens of institutions in the Dominican Republic to create, configure, manage, publish and approve scholarships for citizens who apply for them.</p>"
+    },
+    "_id": "portal-beca-tu-futuro.md",
+    "_raw": {
+      "sourceFilePath": "portal-beca-tu-futuro.md",
+      "sourceFileName": "portal-beca-tu-futuro.md",
+      "sourceFileDir": ".",
+      "contentType": "markdown",
+      "flattenedPath": "portal-beca-tu-futuro"
+    },
+    "type": "Project",
+    "slug": "portal-beca-tu-futuro"
+  },
+  {
+    "title": "www.gob.do",
+    "category": "portal",
+    "url": "https://www.gob.do/",
+    "featuredImage": "/images/portal-gob-do.png",
+    "body": {
+      "raw": "\nIt was achieved that all the country's services are standardized through a digital platform, thus achieving transparency and reducing the time to carry out government processes.\n",
+      "html": "<p>It was achieved that all the country's services are standardized through a digital platform, thus achieving transparency and reducing the time to carry out government processes.</p>"
+    },
+    "_id": "portal-gob-do.md",
+    "_raw": {
+      "sourceFilePath": "portal-gob-do.md",
+      "sourceFileName": "portal-gob-do.md",
+      "sourceFileDir": ".",
+      "contentType": "markdown",
+      "flattenedPath": "portal-gob-do"
+    },
+    "type": "Project",
+    "slug": "portal-gob-do"
+  }
+]
