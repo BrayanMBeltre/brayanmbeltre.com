@@ -9,6 +9,7 @@ import Funfacts from '@/components/Sections/Funfacts';
 import Hero from '@/components/Sections/Hero';
 import SkillsSection from '@/components/Sections/Skills';
 import WorksSection from '@/components/Sections/Works';
+import Seo from '@/components/Seo';
 
 export async function getStaticProps() {
   const projects = allProjects.slice(0, 6);
@@ -20,6 +21,8 @@ export default function HomePage({
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   return (
     <Layout>
+      <Seo />
+
       <Hero />
 
       <AboutSection />
