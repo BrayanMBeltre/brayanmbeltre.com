@@ -12,7 +12,7 @@ type AboutItemProps = {
 
 const AboutItem = ({ title, value }: AboutItemProps) => (
   <li>
-    <p className='text-[#888888]'>
+    <p className='text-[#333333]'>
       {title}: <span className='text-black'>{value}</span>
     </p>
   </li>
@@ -23,7 +23,7 @@ const AboutSection = () => {
     <SectionCard title='About' id='about'>
       <h2>Hello,</h2>
 
-      <p className='mt-[24px] text-[#888888]'>{userData.longDescription}</p>
+      <p className='mt-[24px] text-[#333333]'>{userData.longDescription}</p>
 
       <ul className='my-[24px] grid gap-4 md:grid-cols-2'>
         <AboutItem title='Birthday' value={userData.birthday} />

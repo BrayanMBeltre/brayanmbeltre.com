@@ -28,7 +28,7 @@ const SkillItem = ({ icon, name, isLast }: SkillItemProps) => (
 const SkillsSection = () => {
   return (
     <SectionCard title='My skills' id='about'>
-      <p className='mt-[24px]  text-[#888888]'>{userData.skillsSectionText}</p>
+      <p className='mt-[24px]  text-[#333333]'>{userData.skillsSectionText}</p>
 
       {}
       <ul className='mt-[50px] grid grid-cols-2 gap-[80px] md:grid-cols-4'>

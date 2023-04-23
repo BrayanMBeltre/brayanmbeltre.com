@@ -24,13 +24,13 @@ const ExperienceItem = ({
       )}
     />
 
-    <time className=' text-sm font-normal leading-none text-[#888888]'>
+    <time className=' text-sm font-normal leading-none text-[#333333]'>
       <Balancer>{date}</Balancer>
     </time>
 
     <h3 className=' text-gray-900 '>{title}</h3>
 
-    <p className='text-base font-normal text-[#888888]'>{description}</p>
+    <p className='text-base font-normal text-[#333333]'>{description}</p>
   </li>
 );
 
