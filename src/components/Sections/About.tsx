@@ -34,7 +34,7 @@ const AboutSection = () => {
         <AboutItem title='Email' value={userData.email} />
       </ul>
 
-      <div className='flex gap-4'>
+      <div className='flex flex-col items-start gap-4 sm:flex-row'>
         <ButtonLink
           href={userData.resumeLink}
           target='_blank'
