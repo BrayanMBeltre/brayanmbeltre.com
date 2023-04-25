@@ -1,11 +1,13 @@
+import dynamic from 'next/dynamic';
 import { Inter } from 'next/font/google';
 import * as React from 'react';
 
 import clsxm from '@/lib/clsxm';
 
-import DismissableToast from '@/components/DismissableToast';
 import Aside from '@/components/layout/Aside';
-import MobileNav from '@/components/layout/MobileNav';
+
+const MobileNav = dynamic(() => import('@/components/layout/MobileNav'));
+const DismissableToast = dynamic(() => import('@/components/DismissableToast'));
 
 const inter = Inter({ subsets: ['latin'] });
 

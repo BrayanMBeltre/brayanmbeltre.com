@@ -1,20 +1,21 @@
 import { allProjects } from 'contentlayer/generated';
 import { InferGetStaticPropsType } from 'next';
+import dynamic from 'next/dynamic';
 
 import Layout from '@/components/layout/Layout';
-import AboutSection from '@/components/Sections/About';
-import ContactSection from '@/components/Sections/Contact';
-import Experience from '@/components/Sections/Experience';
-import Funfacts from '@/components/Sections/Funfacts';
 import Hero from '@/components/Sections/Hero';
-import SkillsSection from '@/components/Sections/Skills';
-import WorksSection from '@/components/Sections/Works';
 import Seo from '@/components/Seo';
 
 export async function getStaticProps() {
   const projects = allProjects.slice(0, 6);
   return { props: { projects } };
 }
+const AboutSection = dynamic(() => import('@/components/Sections/About'));
+const SkillsSection = dynamic(() => import('@/components/Sections/Skills'));
+const Funfacts = dynamic(() => import('@/components/Sections/Funfacts'));
+const Experience = dynamic(() => import('@/components/Sections/Experience'));
+const WorksSection = dynamic(() => import('@/components/Sections/Works'));
+const ContactSection = dynamic(() => import('@/components/Sections/Contact'));
 
 export default function HomePage({
   projects,
