@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className='min-h-screen bg-[#f6f7ff]'>
+    <div className='min-h-screen bg-[#fbf1c7] dark:bg-[#282828]'>
       <div
         className={clsxm(
           'mx-auto gap-4  ',

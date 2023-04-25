@@ -18,8 +18,8 @@ const ContactItem = ({ description, href, icon, name }: ContactItemProps) => (
 
     <UnderlineLink target='_blank' href={href} className='cursor-newtab'>
       <div>
-        <p className='font-bold'>{name}</p>
-        {description}
+        <p className='font-bold dark:text-[#ebdbb2]'>{name}</p>
+        <p className='dark:text-[#d5c4a1]'>{description}</p>
       </div>
     </UnderlineLink>
   </li>

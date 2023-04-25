@@ -31,7 +31,7 @@ const MobileNav = ({ className }: Props) => {
           />
         </div>
 
-        <h2 className='flex items-end text-2xl font-bold  text-white'>
+        <h2 className='flex items-end text-2xl font-bold  text-white dark:text-[#ebdba5]'>
           Brayan M. Beltre
           <GoPrimitiveDot className='mb-1 text-[#d65d0e]' size={16} />
         </h2>

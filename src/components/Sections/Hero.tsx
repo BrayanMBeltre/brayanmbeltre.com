@@ -23,7 +23,7 @@ const Hero = () => {
       <div className='absolute h-full w-full bg-[#282828] opacity-90' />
 
       <div className='relative flex h-full w-full items-center justify-center px-[30px] py-[60px] sm:absolute'>
-        <div className='max-w-[600px] space-y-4  text-white'>
+        <div className='max-w-[600px] space-y-4  text-[#ebdbb2]'>
           <h1>
             {userData.greeting}
             <span className='text-primary-600 text-7xl'>.</span>{' '}
