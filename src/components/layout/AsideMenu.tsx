@@ -48,7 +48,7 @@ const AsideMenu = () => {
                 type={isHomePage && menu.type === 'anchor' ? 'a' : 'Link'}
                 href={href}
                 className={clsxm(
-                  'relative flex items-center gap-4 text-white transition-all duration-500 lg:hover:pl-1'
+                  'relative flex items-center gap-4 text-[#ebdbb2] transition-all duration-500 lg:hover:pl-1'
                 )}
               >
                 <div

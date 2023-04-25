@@ -48,7 +48,7 @@ export default function ProjectsPage({ project }: { project: Project }) {
         />
 
         <div
-          className='prose prose-lg my-[40px]'
+          className='prose prose-lg my-[40px] dark:text-[#ebdbb2]'
           dangerouslySetInnerHTML={{ __html: project.body.html }}
         />
 

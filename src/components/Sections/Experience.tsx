@@ -20,17 +20,19 @@ const ExperienceItem = ({
     <div
       className={clsxm(
         'border-primary-600 absolute -left-1.5  h-3 w-3 rounded-full border ',
-        isFirst ? 'bg-primary-600 mt-0' : 'mt-[1px] bg-white'
+        isFirst ? 'bg-primary-600 mt-0' : 'mt-[1px] bg-white dark:bg-[#1d2021]'
       )}
     />
 
-    <time className=' text-sm font-normal leading-none text-[#333333]'>
+    <time className=' text-sm font-normal leading-none text-[#333333] dark:text-[#bdae93]'>
       <Balancer>{date}</Balancer>
     </time>
 
-    <h3 className=' text-gray-900 '>{title}</h3>
+    <h3 className=' text-gray-900 dark:text-[#ebdbb2]'>{title}</h3>
 
-    <p className='text-base font-normal text-[#333333]'>{description}</p>
+    <p className='text-base font-normal text-[#333333] dark:text-[#d5c4a1]'>
+      {description}
+    </p>
   </li>
 );
 

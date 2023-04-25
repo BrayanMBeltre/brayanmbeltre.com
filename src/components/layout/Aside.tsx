@@ -21,7 +21,7 @@ const Aside = ({ className }: AsideProps) => {
   return (
     <aside
       className={clsxm(
-        'sticky h-[620px] flex-shrink-0 rounded-3xl bg-[#282828] p-7 text-white',
+        'sticky h-[620px] flex-shrink-0 rounded-3xl bg-[#282828] p-7 text-[#ebdbb2]  dark:bg-[#1d2021]',
         className
       )}
     >
@@ -36,6 +36,8 @@ const Aside = ({ className }: AsideProps) => {
       </Link>
 
       <AsideMenu />
+
+      {/* <ThemeSwitch /> */}
 
       <p className='pt-[220px] opacity-70'>
         <small>

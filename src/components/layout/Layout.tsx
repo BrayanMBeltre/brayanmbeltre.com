@@ -1,17 +1,18 @@
+import dynamic from 'next/dynamic';
 import { Inter } from 'next/font/google';
 import * as React from 'react';
 
 import clsxm from '@/lib/clsxm';
 
-import DismissableToast from '@/components/DismissableToast';
-import Aside from '@/components/layout/Aside';
-import MobileNav from '@/components/layout/MobileNav';
+const MobileNav = dynamic(() => import('@/components/layout/MobileNav'));
+const Aside = dynamic(() => import('@/components/layout/Aside'));
+const DismissableToast = dynamic(() => import('@/components/DismissableToast'));
 
 const inter = Inter({ subsets: ['latin'] });
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className='min-h-screen bg-[#f6f7ff]'>
+    <div className='min-h-screen bg-[#fbf1c7] dark:bg-[#282828]'>
       <div
         className={clsxm(
           'mx-auto gap-4  ',

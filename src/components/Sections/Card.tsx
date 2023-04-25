@@ -14,7 +14,7 @@ const SectionCard = ({ title, id, children, className }: SectionCardProps) => {
     <section
       // title={title}
       className={clsxm(
-        ' relative rounded-[20px] bg-white shadow-lg',
+        ' relative rounded-[20px] bg-[#282828] shadow-lg dark:bg-[#1d2021]',
         'sm:min-h-[620px]',
         'mb-[50px]',
         'overflow-hidden',
@@ -26,7 +26,7 @@ const SectionCard = ({ title, id, children, className }: SectionCardProps) => {
 
       {title && (
         <div className='mb-[50px]'>
-          <h2 className='font-bold'>{title}</h2>
+          <h2 className='font-bold text-[#ebdbb2]'>{title}</h2>
           <div className='bg-primary-600 mt-[14px] h-[5px] w-[30px] rounded-[25px]' />
         </div>
       )}

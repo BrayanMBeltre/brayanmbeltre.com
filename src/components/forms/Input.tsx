@@ -84,12 +84,13 @@ export default function Input({
           className={clsx(
             'flex w-full rounded-lg shadow-sm',
             'min-h-[2.25rem] px-5 py-4 md:min-h-[2.5rem]',
-            'focus:border-primary-500 focus:ring-primary-500 border-gray-300',
+            'dark:focus:border-primary-600 border-gray-300 focus:ring-0 dark:border-[#ebdbb2]',
             (readOnly || disabled) &&
-              'cursor-not-allowed border-gray-300 bg-gray-100 focus:border-gray-300 focus:ring-0',
-            error && 'border-red-500 focus:border-red-500 focus:ring-red-500',
+              'cursor-not-allowed border-gray-300 bg-gray-100 focus:border-gray-300 focus:ring-0 ',
+            error && 'border-red-500 focus:border-red-500',
             LeftIcon && 'pl-9',
-            rightNode && 'pr-10'
+            rightNode && 'pr-10',
+            'placeholder:text-[#bdae93] dark:bg-[#282828] dark:text-[#ebdbb2]'
           )}
           placeholder={placeholder}
           aria-describedby={id}

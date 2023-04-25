@@ -21,14 +21,16 @@ const SkillItem = ({ icon, name, isLast }: SkillItemProps) => (
       ),
     })}
 
-    <p className=' font-bold uppercase'>{name}</p>
+    <p className='font-bold uppercase dark:text-[#ebdbb2]'>{name}</p>
   </li>
 );
 
 const SkillsSection = () => {
   return (
     <SectionCard title='My skills' id='about'>
-      <p className='mt-[24px]  text-[#333333]'>{userData.skillsSectionText}</p>
+      <p className='mt-[24px]  text-[#333333] dark:text-[#ebdbb2]'>
+        {userData.skillsSectionText}
+      </p>
 
       {}
       <ul className='mt-[50px] grid grid-cols-2 gap-[80px] md:grid-cols-4'>

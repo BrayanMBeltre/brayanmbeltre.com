@@ -63,7 +63,7 @@ export const ProjectCard = ({
       >
         <p
           className={clsxm(
-            'translate-y-6 group-hover:translate-y-0',
+            'translate-y-6 text-lg font-bold group-hover:translate-y-0',
             'transition-transform duration-200'
           )}
         >
