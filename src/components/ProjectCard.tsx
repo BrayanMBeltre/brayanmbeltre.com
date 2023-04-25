@@ -61,14 +61,14 @@ export const ProjectCard = ({
           'text-white'
         )}
       >
-        <h4
+        <p
           className={clsxm(
             'translate-y-6 group-hover:translate-y-0',
             'transition-transform duration-200'
           )}
         >
           <Balancer>{title}</Balancer>
-        </h4>
+        </p>
         <p
           className={clsxm(
             'translate-y-6 group-hover:translate-y-0',
