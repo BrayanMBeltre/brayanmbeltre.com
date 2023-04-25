@@ -4,9 +4,8 @@ import * as React from 'react';
 
 import clsxm from '@/lib/clsxm';
 
-import Aside from '@/components/layout/Aside';
-
 const MobileNav = dynamic(() => import('@/components/layout/MobileNav'));
+const Aside = dynamic(() => import('@/components/layout/Aside'));
 const DismissableToast = dynamic(() => import('@/components/DismissableToast'));
 
 const inter = Inter({ subsets: ['latin'] });
