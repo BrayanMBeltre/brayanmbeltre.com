@@ -11,7 +11,7 @@ export default function NotFoundPage() {
       <Seo templateTitle='Not Found' />
 
       <SectionCard id='404' className='flex items-center justify-center'>
-        <div className='flex flex-col items-center'>
+        <div className='flex flex-col items-center text-[#ebdbb2]'>
           <RiAlarmWarningFill
             size={60}
             className='drop-shadow-glow animate-flicker text-red-500'
