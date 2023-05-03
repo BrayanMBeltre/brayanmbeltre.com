@@ -63,9 +63,9 @@ const ButtonLink = React.forwardRef<HTMLAnchorElement, ButtonLinkProps>(
           //#region  //*=========== Variants ===========
           [
             variant === 'primary' && [
-              'bg-[#fe8019] text-white dark:text-black',
-              'border border-[#fe8019]',
-              'hover:bg-[#fe8019] hover:text-white hover:dark:text-black',
+              'bg-[#cc241d] text-white dark:text-[#ebdbb2]',
+              'border border-[#cc241d]',
+              'hover:bg-[#cc241d] hover:text-white hover:dark:text-[#ebdbb2]',
               'disabled:bg-primary-700',
             ],
             variant === 'outline' && [
