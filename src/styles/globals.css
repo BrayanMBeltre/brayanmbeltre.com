@@ -46,6 +46,10 @@
     cursor: url('/images/new-tab.png') 10 10, pointer;
   }
 
+  html {
+    @apply scroll-smooth bg-[#282828];
+  }
+
   /* #region  /**=========== Typography =========== */
   h1,
   .h1 {
@@ -82,11 +86,6 @@
   .bg-dark a.custom-link {
     @apply border-gray-200 hover:border-gray-200/0;
   }
-
-  /* Class to adjust with sticky footer */
-  .min-h-main {
-    @apply min-h-[calc(100vh-56px)];
-  }
 }
 
 @layer utilities {
@@ -112,8 +111,4 @@
   .animated-underline:focus-visible {
     background-size: 0 2px, 100% 2px;
   }
-}
-
-html {
-  scroll-behavior: smooth;
 }

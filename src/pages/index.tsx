@@ -37,6 +37,7 @@ export default function HomePage({
       <WorksSection data={projects} />
 
       <ContactSection />
+      <div className='mb-[100px]' />
     </Layout>
   );
 }
