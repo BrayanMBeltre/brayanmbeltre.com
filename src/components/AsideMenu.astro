@@ -1,0 +1,30 @@
+---
+import { menuItems } from '@/consts/menuItems.ts';
+---
+
+<nav class='lg:mt-10'>
+  <ul class='flex space-x-3 lg:block lg:space-x-0 lg:space-y-2'>
+    {
+      menuItems.map((item) => (
+        <li>
+          <a
+            href={item.href}
+            class={
+              'relative flex items-center gap-4 text-[#ebdbb2] transition-all duration-500 lg:hover:pl-1'
+            }
+          >
+            <div
+              class:list={[
+                'bg-primary-600 absolute -left-[27px] hidden h-full  rounded-r-md lg:block',
+                ' transition-all duration-200',
+                //   activeSection === menu.href ? 'w-[3px]' : 'w-0'
+              ]}
+            />
+
+            {item.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>

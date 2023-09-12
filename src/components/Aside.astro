@@ -1,0 +1,33 @@
+---
+import avatar from '@/assets/images/avatar.png';
+import AsideMenu from '@/components/AsideMenu.astro';
+import { user } from '@/consts/user';
+---
+
+<aside
+  class:list={[
+    'sticky h-[620px] flex-shrink-0 rounded-3xl bg-[#282828] p-7 text-[#ebdbb2]  dark:bg-[#1d2021]',
+    'top-12 ml-[15px] mt-12 ',
+    `w-[265px]`,
+    'hidden lg:block',
+  ]}
+>
+  <a href='/'>
+    <img alt='avatar' src={avatar.src} />
+
+    <h2 class='text-xl font-bold'>
+      {user.name}<span class='text-4xl text-[#d65d0e]'>.</span>
+    </h2>
+
+    <p class='uppercase'>{user.designation}</p>
+  </a>
+
+  <AsideMenu />
+
+  <p class='pt-[220px] opacity-70'>
+    <small>
+      &copy; {new Date().getFullYear()}
+      {user.name}
+    </small>
+  </p>
+</aside>

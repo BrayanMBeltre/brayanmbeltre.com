@@ -1,0 +1,32 @@
+---
+import avatar from '@/assets/images/avatar.png';
+import AsideMenu from './AsideMenu.astro';
+---
+
+<div class='mx-[15px] lg:hidden my-[20px]'>
+  <div
+    class:list={[
+      'flex justify-between rounded-[20px] bg-[#282828] py-[10px] pr-[30px] sm:h-[57px] sm:flex-row sm:items-center sm:rounded-[30px] sm:py-0',
+    ]}
+  >
+    <a href='/' class='flex items-center gap-2'>
+      <div>
+        <img alt='avatar' src={avatar.src} height={36} width={36} />
+      </div>
+
+      <h2
+        class='flex items-end text-2xl font-bold text-white dark:text-[#ebdba5]'
+      >
+        Brayan M. Beltre
+        <span
+          class='w-[8px] ml-[1px] mb-[6px] h-[8px] bg-[#d65d0e] rounded-full'
+        >
+        </span>
+      </h2>
+    </a>
+  </div>
+
+  <div class='mt-[15px] sm:mt-0'>
+    <AsideMenu />
+  </div>
+</div>

@@ -1,0 +1,36 @@
+---
+// Learn about using Astro layouts:
+// https://docs.astro.build/en/core-concepts/layouts/
+
+// Component Imports
+import MainHead from '../components/MainHead.astro';
+import Nav from '../components/Nav.astro';
+import Footer from '../components/Footer.astro';
+import Aside from '@/components/Aside.astro';
+import MobileNav from '@/components/MobileNav.astro';
+
+interface Props {
+  title?: string | undefined;
+  description?: string | undefined;
+}
+
+const { title, description } = Astro.props;
+---
+
+<html lang='en'>
+  <head>
+    <MainHead title={title} description={description} />
+  </head>
+
+  <body class='h-full min-h-screen bg-[#fbf1c7] dark:bg-[#282828]'>
+    <div class:list={['mx-auto gap-4  ', `max-w-[1280px]`, 'lg:flex']}>
+      <MobileNav />
+
+      <Aside />
+
+      <div class:list={['px-[15px] sm:mt-12', ` lg:w-[1024px]`]}>
+        <slot />
+      </div>
+    </div>
+  </body>
+</html>
