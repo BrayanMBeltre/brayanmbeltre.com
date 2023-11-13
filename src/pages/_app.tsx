@@ -4,6 +4,7 @@ import { AppProps } from 'next/app';
 import Router from 'next/router';
 import { ThemeProvider } from 'next-themes';
 import nProgress from 'nprogress';
+import { Analytics } from '@vercel/analytics/react';
 
 import '@/styles/globals.css';
 import '@/styles/nprogress.css';
@@ -24,6 +25,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         themes={['dark', 'light']}
       >
         <Component {...pageProps} />
+        <Analytics />
       </ThemeProvider>
     </QueryClientProvider>
   );
