@@ -1,10 +1,11 @@
 import { QueryClientProvider } from '@tanstack/react-query';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 import { AppProps } from 'next/app';
 // EXPANSION CHANGES: 2 lines below
 import Router from 'next/router';
 import { ThemeProvider } from 'next-themes';
 import nProgress from 'nprogress';
-import { Analytics } from '@vercel/analytics/react';
 
 import '@/styles/globals.css';
 import '@/styles/nprogress.css';
@@ -26,6 +27,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       >
         <Component {...pageProps} />
         <Analytics />
+        <SpeedInsights />
       </ThemeProvider>
     </QueryClientProvider>
   );
